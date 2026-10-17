@@ -1,0 +1,249 @@
+:root {
+    --color-fondo: #fcf6f5;
+    --color-principal: #0b1c3d;
+    --color-secundario: #576574;
+    --color-tarjeta: #ffffff;
+    --color-borde: #e0d4d1;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+}
+
+.header-principal {
+    background-color: var(--color-tarjeta);
+    border-bottom: 1px solid var(--color-borde);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(11, 28, 61, 0.03);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--color-principal);
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: #34495e;
+    text-decoration: underline;
+}
+
+main {
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+}
+
+#inicio h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+}
+
+#proyectos h2, #contacto h2 {
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-bottom: 1.5rem;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.proyecto-card {
+    border: 1.5px solid var(--color-borde);
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--color-tarjeta);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover {
+    border-color: var(--color-principal);
+    box-shadow: 0 8px 25px rgba(11, 28, 61, 0.06);
+}
+
+.proyecto-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+    color: var(--color-principal);
+}
+
+.proyecto-header h3 span {
+    font-size: 0.85rem;
+    color: var(--color-secundario);
+    font-weight: normal;
+}
+
+.calculadora-oculta {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.calculadora-visible {
+    display: block;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.calculadora input {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: #faf8f7;
+    outline: none;
+}
+
+.botones-calc {
+    display: flex;
+    gap: 10px;
+}
+
+.botones-calc button {
+    flex: 1;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #f0eae7;
+    color: var(--color-principal);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botones-calc button.btn-igual {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+#resultado, #resultadoConv, #resultadoSaldo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--color-principal);
+}
+
+.tecnologias {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.tecnologias span {
+    background: #f0eae7;
+    color: var(--color-principal);
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.formulario-zendesk {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-principal);
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    padding: 12px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: var(--color-tarjeta);
+    font-size: 0.95rem;
+    outline: none;
+    width: 100%;
+}
+
+.btn-enviar {
+    margin-top: 10px;
+    padding: 14px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-borde);
+}

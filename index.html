@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Ingeniería de Software</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-principal">
+        <nav class="nav-bar">
+            <h1 class="logo">Mi Portafolio</h1>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Sobre mi trabajo.</h2>
+            <p>Hola, soy estudiante de ingeniería de software. Diseño y construyo aplicaciones web interactivas y accesibles.</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div id="proyectos-grid" class="grid-container">
+                
+                <!-- Proyecto 1: Calculadora Web -->
+                <article class="proyecto-card" onclick="toggleProyecto('calc-contenedor')">
+                    <div class="proyecto-header">
+                        <h3>Calculadora Web <span>(Haz clic para abrir)</span></h3>
+                        <p>Herramienta interactiva para realizar operaciones matemáticas básicas.</p>
+                    </div>
+
+                    <div id="calc-contenedor" class="calculadora-oculta" onclick="event.stopPropagation();">
+                        <div class="calculadora">
+                            <input type="number" id="num1" placeholder="Número 1">
+                            <input type="number" id="num2" placeholder="Número 2">
+                            <div class="botones-calc">
+                                <button onclick="seleccionarOperacion('+')">+</button>
+                                <button onclick="seleccionarOperacion('-')">-</button>
+                                <button onclick="seleccionarOperacion('*')">×</button>
+                                <button onclick="seleccionarOperacion('/')">÷</button>
+                                <button onclick="ejecutarCalculo()" class="btn-igual">=</button>
+                            </div>
+                            <p id="resultado">Resultado: 0</p>
+                        </div>
+                    </div>
+
+                    <div class="tecnologias">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: Lista de Compras / Supermercado -->
+                <article class="proyecto-card" onclick="toggleProyecto('shop-contenedor')">
+                    <div class="proyecto-header">
+                        <h3>Lista de Compras <span>(Haz clic para abrir)</span></h3>
+                        <p>Herramienta para organizar tus compras y tachar el producto que ya llevaste.</p>
+                    </div>
+
+                    <div id="shop-contenedor" class="calculadora-oculta" onclick="event.stopPropagation();">
+                        <div class="calculadora">
+                            <input type="text" id="nuevoProducto" placeholder="Ej: Café, Leche, Frutas...">
+                            <div class="botones-calc">
+                                <button onclick="agregarProducto()" class="btn-igual">Añadir a la lista</button>
+                            </div>
+                            <ul id="listaCompras" style="text-align: left; margin-top: 12px; padding-left: 20px; color: var(--color-principal);"></ul>
+                        </div>
+                    </div>
+
+                    <div class="tecnologias">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3: Simulador de Presupuesto Rápido -->
+                <article class="proyecto-card" onclick="toggleProyecto('budget-contenedor')">
+                    <div class="proyecto-header">
+                        <h3>Simulador de Presupuesto <span>(Haz clic para abrir)</span></h3>
+                        <p>Calcula el saldo disponible restando los gastos y ver el saldo actual.</p>
+                    </div>
+
+                    <div id="budget-contenedor" class="calculadora-oculta" onclick="event.stopPropagation();">
+                        <div class="calculadora">
+                            <input type="number" id="presupuesto" placeholder="Presupuesto total ($)">
+                            <input type="number" id="gasto" placeholder="Gasto o Compra ($)">
+                            <div class="botones-calc">
+                                <button onclick="calcularSaldo()" class="btn-igual">Calcular Saldo</button>
+                            </div>
+                            <p id="resultadoSaldo">Saldo disponible: $0</p>
+                        </div>
+                    </div>
+
+                    <div class="tecnologias">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Trabajemos juntos</p>
+            
+            <form id="formRegistro" class="formulario-zendesk">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellido</label>
+                        <input type="text" id="apellidos" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pais">País</label>
+                    <select id="pais">
+                        <option value="co">Colombia</option>
+                        <option value="mx">México</option>
+                        <option value="ar">Argentina</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Mi Portafolio Web</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
