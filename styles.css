@@ -248,9 +248,11 @@ footer {
     border-top: 1px solid var(--color-borde);
 }
 .avatar-img {
-    width: 180px;         /* Tamaño de la imagen */
-    height: auto;
-    border-radius: 50%;   /* Si quieres que se vea redondeada */
-    display: block;
-    margin: 1rem auto;    /* Centra la imagen */
+  width: 100%;
+  max-width: 400px; 
+  height: auto;
+  border-radius: 0; 
+  background: transparent;
+  display: block;
+  margin: 20px auto;
 }
